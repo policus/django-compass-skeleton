@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>{% block html_title %}Base Template{% endblock %}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/screen.css" type="text/css" media="screen">
+    <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.ico" />
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body id="{% block body_id %}base{% endblock %}" class="{% block body_class %}default{% endblock %}">
+    
+    {% block body_content %}{% endblock %}
+    
+    <!-- 
+        You'll probably want to grab jquery and html5shiv
+        <script src="{{ STATIC_URL }}js/jquery.min.js"></script>
+    -->
+    <!--[if IE]>
+        <script src="{{ STATIC_URL }}js/html5shiv.js"></script>
+    <![endif]-->
+        
+    {% block extra_js %}{% endblock %}
+    
+</body>
+</html>
